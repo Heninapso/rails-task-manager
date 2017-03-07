@@ -13,6 +13,9 @@ class TasksController < ApplicationController
   end
 
   def create
+    @task = Task.new
+    @task.save
+    redirect_to tasks_path
   end
 
   def edit
