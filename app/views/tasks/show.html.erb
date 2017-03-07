@@ -4,3 +4,9 @@
   <li><%= @task.description%></li>
   <li><%= @task.status%></li>
 </ul>
+
+<li><%= link_to "Update task", edit_path(@task) %></li>
+<li><%= link_to "Delete task", erase_path(@task),
+  method: :delete,
+  data: { confirm: "Are you sure?" } %></li>
+
